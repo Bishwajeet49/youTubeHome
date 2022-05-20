@@ -634,7 +634,6 @@ font-size: 14px;
 
 /*content Box CSS*/
 .contentBox{
-background: #181818;
 padding: 20px;
 color:#fff;
 }
@@ -753,14 +752,11 @@ display: none;
 cursor: pointer;
 margin-top: 15px;
 display:grid;
-grid-template-columns: 36px 1fr 5px;
+grid-template-columns: 36px 1fr 25px;
 position: relative;/*some doubt*/
 
 }
-.video_lower_box div{
-/* height: 36px; */
-
-}
+/*  */
 .chanell_icon_boX{
 height: 36px; 
 border-radius:50%;
@@ -826,5 +822,47 @@ font-size:8px;
 
 }
 
+.dots_for_popup{
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots_for_popup:hover{
+    background-color: hsl(0, 0%, 19.6%);
+}
+.popupMenuForVideos{
+    background: #212121;
+    border-radius: 5px;
+    position: fixed;
+    padding: 5px 0px;
+    color:#fff;
+    font-size: 14px;
+    font-family: sans-serif;
+    /* top:20px; */
+    width:max-content;
+    /* left:280px; */
+    box-shadow: rgb(0, 0, 0) 0px 1px 3px, rgb(0, 0, 0) 0px 1px 2px;
+    z-index: 13;
+    transform: scale(0);
+    transform-origin:top left ;/*specify from where animation start*/
+}
+.popupMenuForVideos.Popup_active{
+    transform: scale(1);
+            transition:transform 250ms ease-in-out;
+}
+.popupMenuForVideos ul li{
+    list-style: none;
+    padding:  10px 15px;
+    transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    cursor: pointer;
+   
+}
+.popupMenuForVideos ul li:hover{
+    background-color: hsl(0, 0%, 19.6%);
+}
+.popupMenuForVideos ul li span{
+   margin-left: 15px;
+}
 
-*/
